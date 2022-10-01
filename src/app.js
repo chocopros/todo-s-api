@@ -1,4 +1,6 @@
+
 const express = require("express");
+
 
 const app = express();
 
@@ -15,16 +17,28 @@ app.get("/", (req, res) => {
 const database = [
   {
     id: 1,
-    title: "Este es un asdkfjbsdljkfb",
+    title: "titulo 1",
     is_completed: false,
     url: "http://127.0.0.1:9000/todos/1"
   },
   {
     id: 2,
-    title: "Este es otro titulo",
-    is_completed: false,
+    title: "titulo 2",
+    is_completed: true,
     url: "http://127.0.0.1:9000/todos/2"
   },
+  {
+    id: 3,
+    title: "titulo 3",
+    is_completed: false,
+    url: "http://127.0.0.1:9000/todos/3"
+  },
+  {
+    id: 4,
+    title: "titulo 4",
+    is_completed: true,
+    url: "http://127.0.0.1:9000/todos/4"
+  }
 ];
 
 // GET INITIAL INDEX /todos
@@ -56,7 +70,7 @@ app.get("/todos/:id", (req, res) => {
 
 
 app.post("/todos", (req, res) => {
-  
+
   //? req = request = Petición
   //? res = response = Respuesta
 
